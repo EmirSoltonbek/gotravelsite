@@ -1,0 +1,121 @@
+{
+  "trips": [
+    {
+      "picture": "https://kyrgyzstan-tourism.com/wp-content/uploads/2019/03/Slider_HBR-2.jpg",
+      "location": "5555",
+      "description": "5555",
+      "data": "555",
+      "price": 55555,
+      "type": "Horseback tours",
+      "id": 1
+    },
+    {
+      "picture": "https://kyrgyzstan-tourism.com/wp-content/uploads/2019/03/Slider_trek-1.jpg",
+      "location": "ииииииии",
+      "description": "5555",
+      "data": "555",
+      "price": 55555,
+      "type": "Trekking Kyrgyzstan",
+      "id": 2
+    },
+    {
+      "picture": "https://kyrgyzstan-tourism.com/wp-content/uploads/2020/03/Song-Kol_October.jpg",
+      "location": "5555",
+      "description": "5555",
+      "data": "555",
+      "price": 55555,
+      "type": "Off road tours",
+      "id": 3
+    },
+    {
+      "picture": "https://kyrgyzstan-tourism.com/wp-content/uploads/2020/02/Winter-Slide.jpg",
+      "location": "5555",
+      "description": "5555",
+      "data": "555",
+      "price": 55555,
+      "type": "Winter tours",
+      "id": 4
+    },
+    {
+      "picture": "https://kyrgyzstan-tourism.com/wp-content/uploads/2019/04/HeaderBike-1.jpg",
+      "location": "5555",
+      "description": "5555",
+      "data": "555",
+      "price": 55555,
+      "type": "Bike tours",
+      "id": 5
+    },
+    {
+      "picture": "https://kyrgyzstan-tourism.com/wp-content/uploads/2019/03/TashRabat_Sights.jpg",
+      "location": "5555",
+      "description": "5555",
+      "data": "555",
+      "price": 55555,
+      "type": "Culture tours",
+      "id": 6
+    },
+    {
+      "picture": "https://kyrgyzstan-tourism.com/wp-content/uploads/2019/03/Slider_Photo.jpg",
+      "location": "5555",
+      "description": "5555",
+      "data": "555",
+      "price": 55555,
+      "type": "Photo tours",
+      "id": 7
+    },
+    {
+      "picture": "https://kyrgyzstan-tourism.com/wp-content/uploads/2022/10/Golden-Eagle.jpg",
+      "location": "5555",
+      "description": "5555",
+      "data": "555",
+      "price": 55555,
+      "type": "Experience tours",
+      "id": 8
+    },
+    {
+      "picture": "https://kyrgyzstan-tourism.com/wp-content/uploads/2020/03/OrtoSai_Bishkek.jpg",
+      "location": "5555",
+      "description": "5555",
+      "data": "555",
+      "price": 55555,
+      "type": "One Day Tours",
+      "id": 9
+    },
+    {
+      "picture": "aaa",
+      "location": "aaas",
+      "description": "dsd",
+      "data": "asdf",
+      "price": 12334,
+      "type": "asd",
+      "id": 10
+    },
+    {
+      "picture": "",
+      "location": "",
+      "description": "",
+      "data": "",
+      "price": "",
+      "type": 20,
+      "id": 11
+    },
+    {
+      "picture": "",
+      "location": "",
+      "description": "",
+      "data": "",
+      "price": "",
+      "type": 10,
+      "id": 12
+    },
+    {
+      "picture": "",
+      "location": "",
+      "description": "",
+      "data": "",
+      "price": "",
+      "type": "Culture tours",
+      "id": 13
+    }
+  ]
+}

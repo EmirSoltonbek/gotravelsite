@@ -1,0 +1,76 @@
+  /* Общий стиль для корзины */
+  .cart {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Стиль для заголовка корзины */
+  .cart h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* Стиль для списка товаров */
+  .cart-items {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  /* Стиль для каждого элемента товара */
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Стиль для названия товара */
+  .cart-item .item-name {
+    flex-grow: 1;
+    font-weight: bold;
+  }
+
+  /* Стиль для цены товара */
+  .cart-item .item-price {
+    margin-left: 20px;
+  }
+
+  /* Стиль для кнопки удаления товара */
+  .cart-item .remove-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  /* Стиль для общей суммы */
+  .total {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: right;
+  }
+
+  /* Медиа-запрос для мобильных устройств */
+  @media (max-width: 480px) {
+    .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .cart-item .item-price {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
