@@ -11,6 +11,7 @@ import CreditCard from "./components/CreditCard/CreditCard";
 import PaymentCheck from "./components/PaymentCheck/PaymentCheck";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactsPage from "./pages/ContactsPage";
+import Like from "./components/like/Like";
 
 const MyRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -25,6 +26,7 @@ const MyRoutes = () => {
     { link: "/paymentCheck", element: <PaymentCheck />, id: 9 },
     { link: "/about", element: <AboutUsPage />, id: 10 },
     { link: "/contacts", element: <ContactsPage />, id: 11 },
+    { link: "/likes", element: <Like />, id: 12 },
   ];
   return (
     <>

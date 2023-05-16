@@ -22,6 +22,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import AddShoppingCart from '@mui/icons-material/AddShoppingCart';
 import { useCart } from '../../contexts/CartContextProvider';
+import { useLike } from '../../contexts/LikeContextProvider';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -64,7 +65,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Navbar() {
-  const {cart} = useCart()
+  const {cart} = useCart();
+  const {like} = useLike();
 
   // search
   const [searchParams, setSearchParams] = useSearchParams();
@@ -208,7 +210,7 @@ export default function Navbar() {
           aria-label="show 17 new notifications"
           color="inherit"
         >
-          <Badge badgeContent={17} color="error">
+          <Badge badgeContent={like.products.length} color="error">
             <FavoriteBorderIcon />
           </Badge>
         </IconButton>
@@ -302,11 +304,13 @@ export default function Navbar() {
                 </Badge>
             </IconButton>
             </Link>
+            <Link to="/likes">
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={44} color="error">
+              <Badge badgeContent={like.products.length} color="error">
                 <FavoriteBorderIcon />
               </Badge>
             </IconButton>
+            </Link>
             <IconButton
               size="large"
               aria-label="show 17 new notifications"

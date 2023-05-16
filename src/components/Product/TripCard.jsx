@@ -10,12 +10,16 @@ import { useTrip } from '../../contexts/TripContextProvider';
 import { useNavigate } from 'react-router-dom';
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useCart } from '../../contexts/CartContextProvider';
+import BookmarkOutlinedIcon from '@mui/icons-material/BookmarkOutlined';
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
+import { useLike } from '../../contexts/LikeContextProvider';
 
 
 export default function TripCard({ item }) {
   const navigate = useNavigate();
   const {deleteTrip} =useTrip();
   const {addProductToCart,checkProductInCart}=useCart();
+  const {addProductToLike, checkLike} = useLike()
     return (<>
       
       <Card sx={{ maxWidth: 345, my: "20px",mx:"5px", width:300}}>
@@ -48,6 +52,14 @@ export default function TripCard({ item }) {
   
           <Button size="small" onClick={()=>navigate(`/details/${item.id}`)}>Details</Button>
         </CardActions>
+        <IconButton onClick={()=>addProductToLike(item)}>
+              <FavoriteOutlinedIcon
+              color={checkLike(item.id) ? "error" : ""}/>
+            </IconButton>
+            <IconButton onClick={()=>addProductToLike(item)}>
+              <BookmarkOutlinedIcon
+              color={checkLike(item.id) ? "primary" : ""}/>
+            </IconButton>
       </Card>
       </>
     );

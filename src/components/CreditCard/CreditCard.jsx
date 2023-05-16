@@ -5,6 +5,7 @@ import { useCreditCard } from '../../contexts/CreditCardProvider';
 import 'react-credit-cards-2/dist/es/styles-compiled.css';
 import { useCart } from '../../contexts/CartContextProvider';
 import { useNavigate } from 'react-router-dom';
+import "./CreditCard.css"
 // import "../CreditCard/CreditCard.css"s
 
 

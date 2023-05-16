@@ -8,7 +8,9 @@
       "price": 2000,
       "type": "Конный тур",
       "id": 1,
-      "Тип": "Horseback tours"
+      "comments":[
+ 
+      ]
     },
     {
       "picture": "https://avatars.mds.yandex.net/i?id=990567adb29a8218618f04b27fdc9056a427d6e6-8487335-images-thumbs&n=13",
@@ -18,7 +20,9 @@
       "price": 900,
       "type": "Поход",
       "id": 2,
-      "Тип": "Trekking Kyrgyzstan"
+      "comments":[
+        {"comment" : "aaaaaaaa"}
+      ]
     },
     {
       "picture": "https://i.ytimg.com/vi/Ulb8p3ZNIWo/maxresdefault.jpg",
@@ -27,7 +31,10 @@
       "data": "06.13.2023",
       "price": 1900,
       "type": "Экскурсионный",
-      "id": 3
+      "id": 3,
+      "comments":[
+        {"comment" : "aaaaaaaa"}
+      ]
     },
     {
       "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGnJ6-wJ3l2ZRAnW0RcymWn5yS904AfYAgnA&usqp=CAU",
@@ -36,7 +43,10 @@
       "data": "09.07.2023",
       "price": 2300,
       "type": "Комбинированный",
-      "id": 4
+      "id": 4,
+      "comments":[
+        {"comment" : "aaaaaaaa"}
+      ]
     },
     {
       "picture": "https://u24.ru/img/news/article_big_453491535238422.jpg",
@@ -45,7 +55,10 @@
       "data": "05.07.2023",
       "price": 5000,
       "type": "Пляжные",
-      "id": 5
+      "id": 5,
+      "comments":[
+        {"comment" : "aaaaaaaa"}
+      ]
     },
     {
       "picture": "https://ic.pics.livejournal.com/frantsouzov/21599674/594398/594398_original.jpg",
@@ -54,7 +67,10 @@
       "data": "07.02.2023",
       "price": 1200,
       "type": "Познавательные",
-      "id": 6
+      "id": 6,
+      "comments":[
+        {"comment" : "aaaaaaaa"}
+      ]
     },
     {
       "picture": "https://35photo.pro/photos_series/2283/2283216.jpg",
@@ -63,7 +79,10 @@
       "data": "17.06.2023",
       "price": 3000,
       "type": "Познавательные",
-      "id": 7
+      "id": 7,
+      "comments":[
+        {"comment" : "aaaaaaaa"}
+      ]
     },
     {
       "picture": "https://24.kg/files/media/73/73874.jpg",
@@ -72,7 +91,10 @@
       "data": "20.05.2023",
       "price": 1700,
       "type": "Оздоровительные",
-      "id": 8
+      "id": 8,
+      "comments":[
+        {"comment" : "aaaaaaaa"}
+      ]
     },
     {
       "picture": "https://i.ibb.co/wL4MkDx/19ce4b88b958494670887bb6b6516c972d6945f2.jpg",
@@ -81,7 +103,10 @@
       "data": "20.05.2023",
       "price": 2000,
       "type": "Конный тур",
-      "id": 9
+      "id": 9,
+      "comments":[
+        {"comment" : "aaaaaaaa"}
+      ]
     },
     {
       "picture": "https://avatars.mds.yandex.net/i?id=990567adb29a8218618f04b27fdc9056a427d6e6-8487335-images-thumbs&n=13",
@@ -90,7 +115,10 @@
       "data": "01.06.2023",
       "price": 900,
       "type": "Поход",
-      "id": 10
+      "id": 10,
+      "comments":[
+        {"comment" : "aaaaaaaa"}
+      ]
     },
     {
       "picture": "https://i.ytimg.com/vi/Ulb8p3ZNIWo/maxresdefault.jpg",
@@ -99,7 +127,10 @@
       "data": "06.13.2023",
       "price": 1900,
       "type": "Экскурсионный",
-      "id": 11
+      "id": 11,
+      "comments":[
+        {"comment" : "aaaaaaaa"}
+      ]
     },
     {
       "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGnJ6-wJ3l2ZRAnW0RcymWn5yS904AfYAgnA&usqp=CAU",
@@ -108,7 +139,10 @@
       "data": "09.07.2023",
       "price": 2300,
       "type": "Комбинированный",
-      "id": 12
+      "id": 12,
+      "comments":[
+        {"comment" : "aaaaaaaa"}
+      ]
     },
     {
       "picture": "https://u24.ru/img/news/article_big_453491535238422.jpg",
@@ -117,7 +151,10 @@
       "data": "05.07.2023",
       "price": 5000,
       "type": "Пляжные",
-      "id": 13
+      "id": 13,
+      "comments":[
+        {"comment" : "aaaaaaaa"}
+      ]
     },
     {
       "picture": "https://ic.pics.livejournal.com/frantsouzov/21599674/594398/594398_original.jpg",
@@ -126,7 +163,10 @@
       "data": "07.02.2023",
       "price": 1200,
       "type": "Познавательные",
-      "id": 14
+      "id": 14,
+      "comments":[
+        {"comment" : "aaaaaaaa"}
+      ]
     },
     {
       "picture": "https://35photo.pro/photos_series/2283/2283216.jpg",
@@ -135,7 +175,10 @@
       "data": "17.06.2023",
       "price": 3000,
       "type": "Познавательные",
-      "id": 15
+      "id": 15,
+      "comments":[
+        {"comment" : "aaaaaaaa"}
+      ]
     },
     {
       "picture": "https://24.kg/files/media/73/73874.jpg",
@@ -144,7 +187,11 @@
       "data": "20.05.2023",
       "price": 1700,
       "type": "Оздоровительные",
-      "id": 16
+      "id": 16,
+      "comments":[
+        {"comment":"jjjjjjj"}
+      ]
     }
   ]
 }
+

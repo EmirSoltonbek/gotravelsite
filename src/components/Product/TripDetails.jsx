@@ -1,12 +1,11 @@
-import { Box, Button, TextField, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { useTrip } from '../../contexts/TripContextProvider';
+import "../styles/TripDetails.css"
 
 const TripDetails = () => {
   const navigate = useNavigate();
   const {getTripDetails, tripDetails} = useTrip();
-  console.log(tripDetails)
 
   const {id} = useParams();
 
@@ -18,17 +17,46 @@ const TripDetails = () => {
     navigate(-1);
   };
 
+  function addComment(newComment){
+    tripDetails.comments.push(newComment);
+    console.log(tripDetails.comments)
+  }
+  const [comment, setComment]= useState('');
+  const handleValues=()=>{
+    let newComment = {
+        comment:comment,
+    }
+    addComment(newComment);
+    setComment('');
+}
+
   return (
     <>
-      <Box sx={{ width: "60vw", margin: "10vh auto" }}>
-        <Typography variant="h4">DETAILS PANEL</Typography>
-        <h3>Picture: {tripDetails.picture}</h3>
-        <h3>Location: {tripDetails.location}</h3>
-        <h3>Description: {tripDetails.description}</h3>
-        <h3>Data: {tripDetails.data}</h3>
-        <h3>Price: {tripDetails.price}</h3>
-        <button onClick={goBack}>GO BACK</button>
-      </Box>
+    <div class="container">
+    <h1>Picture: </h1>
+    <p>{tripDetails.picture}</p>
+    
+    <h2>Location:</h2>
+    <p>{tripDetails.location}</p>
+    
+    <h2>Description:</h2>
+    <p>{tripDetails.description}</p>
+    
+    <h2>Data:</h2>
+    <p>{tripDetails.data}</p>
+    
+    <h2>Price:</h2>
+    <p>{tripDetails.price}</p>
+    
+    <h2>Заголовок 6</h2>
+    <p>Описание 6...</p>
+    <input type="text" placeholder='username'/>
+    <br />
+    <textarea type="text" placeholder='comment' onChange={(e)=>setComment(e.target.value)}/>
+    <button onClick={handleValues}>Add comment</button>
+    <br />
+    <button onClick={goBack}>GO BACK</button>
+  </div>
     </>
   )
 }

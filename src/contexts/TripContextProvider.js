@@ -5,7 +5,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 export const tripContext = createContext();
 export const useTrip = () => useContext(tripContext);
-
 const INIT_STATE = {
   trips: [],
   tripDetails: {},
