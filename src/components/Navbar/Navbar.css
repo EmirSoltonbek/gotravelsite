@@ -1,5 +1,10 @@
 .css-hip9hq-MuiPaper-root-MuiAppBar-root,.MuiToolbar-root ,.MuiToolbar-gutters ,.MuiToolbar-regular ,.css-hyum1k-MuiToolbar-root,.css-hip9hq-MuiPaper-root-MuiAppBar-root{
-    background-color:transparent!important;
+    background-color:#dde9ff!important;
     box-shadow: none!important;
     color: black;
+}
+button{
+    background-color: inherit;
+    border: none;
+    margin-right:15px;
 }

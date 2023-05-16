@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { IconButton } from '@mui/material';
+import {IconButton } from '@mui/material';
 import { useTrip } from '../../contexts/TripContextProvider';
 import { useNavigate } from 'react-router-dom';
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
@@ -16,22 +16,20 @@ export default function TripCard({ item }) {
   const navigate = useNavigate();
   const {deleteTrip} =useTrip();
   const {addProductToCart,checkProductInCart}=useCart();
-    return (
-      <Card sx={{ maxWidth: 345, my: "20px",mx:"5px", minWidth: 395}}>
+    return (<>
+      
+      <Card sx={{ maxWidth: 345, my: "20px",mx:"5px", width:300}}>
         <CardMedia
-          sx={{ height: 260 }}
+          sx={{ height: 220 }}
           image={item.picture}
-          title="green iguana"
+          title="picture"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {item.location}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {item.description}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {item.price}
+            {item.price} som
           </Typography>
         </CardContent>
         <CardActions>
@@ -51,6 +49,7 @@ export default function TripCard({ item }) {
           <Button size="small" onClick={()=>navigate(`/details/${item.id}`)}>Details</Button>
         </CardActions>
       </Card>
+      </>
     );
   }
   

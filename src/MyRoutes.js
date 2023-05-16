@@ -7,6 +7,8 @@ import TripListPage from "./pages/TripListPage";
 import EditProductPage from "./pages/EditProductPage";
 import TripDetailsPage from "./pages/TripDetailsPage";
 import CartPage from "./pages/CartPage";
+import CreditCard from "./components/CreditCard/CreditCard";
+import PaymentCheck from "./components/PaymentCheck/PaymentCheck";
 
 const MyRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -17,6 +19,8 @@ const MyRoutes = () => {
     { link: "/edit/:id", element: <EditProductPage />, id: 5 },
     { link: "/details/:id", element: <TripDetailsPage />, id: 6 },
     { link: "/cart", element: <CartPage />, id: 7 },
+    { link: "/creditCard", element: <CreditCard />, id: 8 },
+    { link: "/paymentCheck", element: <PaymentCheck />, id: 9 },
   ];
   return (
     <>

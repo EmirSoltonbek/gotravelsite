@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { useTrip } from '../../contexts/TripContextProvider'
 import TripCard from './TripCard'
 import { useSearchParams } from 'react-router-dom';
-import { Box, Grid, Pagination } from '@mui/material';
+import NativeSelect from '@mui/material/NativeSelect';
+import { Box, FormControl, Grid, InputLabel, Pagination} from '@mui/material';
 
 const TripList = () => {
-    const {trips, getTrips}= useTrip();
+    const {trips, getTrips, fetchByType}= useTrip();
     const [searchParams, setSearchParams]= useSearchParams();
-
-    useEffect(()=>{
+      useEffect(()=>{
         getTrips()
     },[])
     console.log(trips);
@@ -33,8 +33,33 @@ const TripList = () => {
     }
     
       return (
-    <>
      <Grid item md={12}>
+     <Box sx={{ minWidth: 120, textAlign:"center"}}>
+      <FormControl >
+        <InputLabel variant="standard" htmlFor="uncontrolled-native">
+          Type
+        </InputLabel>
+        <NativeSelect
+          defaultValue="All"
+          inputProps={{
+            name: 'Type',
+            id: 'uncontrolled-native',
+          }}
+          onChange={(e)=>fetchByType("type", e.target.value)}
+        >
+          <option value="All">All</option>
+          <option value="Bike tours">Bike tours</option>
+          <option value="Trekking Kyrgyzstan">Trekking Kyrgyzstan</option>
+          <option value="Off road tours">Off road tours</option>
+          <option value="Winter tours">Winter tours</option>
+          <option value="Culture tours">Culture tours</option>
+          <option value="Photo tours">Photo tours</option>
+          <option value="Experience tours">Experience tours</option>
+          <option value="One Day Tours">One Day Tours</option>
+       
+        </NativeSelect>
+      </FormControl>
+    </Box>
         <Box
           sx={{
             display: "flex",
@@ -63,7 +88,6 @@ const TripList = () => {
         />
         </Box>
       </Grid>
-    </>
   )
 }
 

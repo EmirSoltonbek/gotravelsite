@@ -1,4 +1,4 @@
-import { Box, Button, TextField, Typography } from '@mui/material'
+import { Box, Button, FormControl, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { useTrip } from '../../contexts/TripContextProvider';
@@ -96,7 +96,7 @@ const EditProduct = () => {
           onChange={handleInput}
           value={trip.price || ""}
         />
-          <TextField
+          {/* <TextField
           sx={{ marginBottom: "10px" }}
           fullWidth
           id="outlined-basic"
@@ -106,7 +106,30 @@ const EditProduct = () => {
           name="type"
           onChange={handleInput}
           value={trip.type || ""}
-        />
+        /> */}
+          <Box sx={{ minWidth: 120 }} >
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label" size="small">type</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          label="type"
+          name="type"
+          onChange={handleInput}
+          value={trip.type || ""}
+        >
+          <MenuItem value="Horseback tours">Horseback tours</MenuItem>
+          <MenuItem value="Trekking Kyrgyzstan">Trekking Kyrgyzstan</MenuItem>
+          <MenuItem value="Off road tours">Off road tours</MenuItem>
+          <MenuItem value="Winter tours">Winter tours</MenuItem>
+          <MenuItem value="Bike tours">Bike tours</MenuItem>
+          <MenuItem value="Culture tours">Culture tours</MenuItem>
+          <MenuItem value="Photo tours">Photo tours</MenuItem>
+          <MenuItem value="Experience tours">Experience tours</MenuItem>
+          <MenuItem value="One Day Tours">One Day Tours</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
         <Button
           onClick={() => saveEditedTrip(trip)}
           fullWidth

@@ -6,12 +6,12 @@
       "description": "5555",
       "data": "555",
       "price": 55555,
-      "type": "Horseback tours",
+      "type": "Bike tours",
       "id": 1
     },
     {
       "picture": "https://kyrgyzstan-tourism.com/wp-content/uploads/2019/03/Slider_trek-1.jpg",
-      "location": "ииииииии",
+      "location": "щщщщщщщ",
       "description": "5555",
       "data": "555",
       "price": 55555,
@@ -21,7 +21,7 @@
     {
       "picture": "https://kyrgyzstan-tourism.com/wp-content/uploads/2020/03/Song-Kol_October.jpg",
       "location": "5555",
-      "description": "5555",
+      "description": "66666",
       "data": "555",
       "price": 55555,
       "type": "Off road tours",
@@ -56,8 +56,8 @@
     },
     {
       "picture": "https://kyrgyzstan-tourism.com/wp-content/uploads/2019/03/Slider_Photo.jpg",
-      "location": "5555",
-      "description": "5555",
+      "location": "66666",
+      "description": "66666",
       "data": "555",
       "price": 55555,
       "type": "Photo tours",
@@ -82,40 +82,13 @@
       "id": 9
     },
     {
-      "picture": "aaa",
-      "location": "aaas",
-      "description": "dsd",
-      "data": "asdf",
-      "price": 12334,
-      "type": "asd",
+      "picture": "https://kyrgyzstan-tourism.com/wp-content/uploads/2020/03/OrtoSai_Bishkek.jpg",
+      "location": "66666",
+      "description": "66666",
+      "data": "66666",
+      "price": 55555,
+      "type": "One Day Tours",
       "id": 10
-    },
-    {
-      "picture": "",
-      "location": "",
-      "description": "",
-      "data": "",
-      "price": "",
-      "type": 20,
-      "id": 11
-    },
-    {
-      "picture": "",
-      "location": "",
-      "description": "",
-      "data": "",
-      "price": "",
-      "type": 10,
-      "id": 12
-    },
-    {
-      "picture": "",
-      "location": "",
-      "description": "",
-      "data": "",
-      "price": "",
-      "type": "Culture tours",
-      "id": 13
     }
   ]
 }

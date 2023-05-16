@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createContext, useContext, useReducer } from "react";
 import { JSON_API_TRIPS } from "../components/helpers/consts";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const tripContext = createContext();
 export const useTrip = () => useContext(tripContext);
@@ -57,6 +57,21 @@ const TripContextProvider = ({ children }) => {
     navigate("/card");
   };
 
+  const location = useLocation();
+  console.log(location.pathname);
+  const fetchByType = async (query, value) => {
+    const search = new URLSearchParams(window.location.search);
+
+    if (value === "All") {
+      search.delete(query);
+    } else {
+      search.set(query, value);
+    }
+
+    const url = `${location.pathname}?${search.toString()}`;
+    navigate(url);
+  };
+
   const values = {
     addTrip,
     getTrips,
@@ -65,6 +80,7 @@ const TripContextProvider = ({ children }) => {
     tripDetails: state.tripDetails,
     getTripDetails,
     saveEditedTrip,
+    fetchByType,
   };
   return <tripContext.Provider value={values}>{children}</tripContext.Provider>;
 };

@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react'
 import "./Cart.css"
 import { useCart } from '../../contexts/CartContextProvider'
+import { useNavigate } from 'react-router-dom'
+import CreditCard from '../CreditCard/CreditCard'
 
 const Cart = () => {
+  const navigate = useNavigate();
     const {getCart,
         cart, deleteCartProduct, changeProductCount} = useCart()
 
@@ -27,6 +30,9 @@ const Cart = () => {
         ))}
     </ul>
     <div className="total">Общая сумма: {cart.totalPrice}</div>
+    <button onClick={() => {
+      navigate("/creditCard")
+    }}>BUY NOW</button>
   </div>
     </div>
   )

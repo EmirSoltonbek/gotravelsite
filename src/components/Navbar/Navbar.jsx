@@ -143,7 +143,7 @@ export default function Navbar() {
         >
             <LocationOnIcon />
         </IconButton>
-        <p>Location</p>
+        <p>Главная</p>
       </MenuItem>
       <MenuItem>
         <IconButton
@@ -153,7 +153,7 @@ export default function Navbar() {
         >
             <ManageSearchIcon />
         </IconButton>
-        <p>Destinations</p>
+        <p>Админ</p>
       </MenuItem>
       <MenuItem>
         <IconButton
@@ -163,7 +163,7 @@ export default function Navbar() {
         >
             <ShopIcon />
         </IconButton>
-        <p>Shop</p>
+        <p>Туры</p>
       </MenuItem>
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
@@ -234,12 +234,16 @@ export default function Navbar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-          <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                <LocationOnIcon />
-            </IconButton>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                <ManageSearchIcon /> 
-            </IconButton>
+          <button>
+                Главная
+            </button>
+            <button>
+                Админ
+            </button>
+
+
+                <button>Туры</button>
+            <button>Контакты</button>
           <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                 <Badge>
                 <ShopIcon />

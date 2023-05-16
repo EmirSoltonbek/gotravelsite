@@ -1,7 +1,7 @@
   /* Общий стиль для корзины */
   .cart {
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f1f1f1;
