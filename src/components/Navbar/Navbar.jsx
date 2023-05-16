@@ -136,45 +136,45 @@ export default function Navbar() {
       onClose={handleMobileMenuClose}
     >
           <MenuItem>
-        <IconButton
+        {/* <IconButton
           size="large"
           aria-label="show 17 new notifications"
           color="inherit"
         >
             <LocationOnIcon />
-        </IconButton>
+        </IconButton> */}
         <p>Главная</p>
       </MenuItem>
       <MenuItem>
-        <IconButton
+        {/* <IconButton
           size="large"
           aria-label="show 17 new notifications"
           color="inherit"
         >
             <ManageSearchIcon />
-        </IconButton>
+        </IconButton> */}
         <p>Админ</p>
       </MenuItem>
       <MenuItem>
-        <IconButton
+        {/* <IconButton
           size="large"
           aria-label="show 17 new notifications"
           color="inherit"
         >
             <ShopIcon />
-        </IconButton>
+        </IconButton> */}
         <p>Туры</p>
       </MenuItem>
       <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+        {/* <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
             <MailIcon />
           </Badge>
-        </IconButton>
-        <p>Messages</p>
+        </IconButton> */}
+        <p>Контакты</p>
       </MenuItem>
       <MenuItem>
-        <IconButton
+        {/* <IconButton
           size="large"
           aria-label="show 17 new notifications"
           color="inherit"
@@ -182,8 +182,8 @@ export default function Navbar() {
           <Badge badgeContent={17} color="error">
             <NotificationsIcon />
           </Badge>
-        </IconButton>
-        <p>Notifications</p>
+        </IconButton> */}
+        <p>Онас</p>
       </MenuItem>
      
       <MenuItem onClick={handleProfileMenuOpen}>
@@ -244,6 +244,7 @@ export default function Navbar() {
 
                 <button>Туры</button>
             <button>Контакты</button>
+            <button>Онас</button>
           <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                 <Badge>
                 <ShopIcon />
