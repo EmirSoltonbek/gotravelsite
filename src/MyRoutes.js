@@ -9,6 +9,8 @@ import TripDetailsPage from "./pages/TripDetailsPage";
 import CartPage from "./pages/CartPage";
 import CreditCard from "./components/CreditCard/CreditCard";
 import PaymentCheck from "./components/PaymentCheck/PaymentCheck";
+import AboutUsPage from "./pages/AboutUsPage";
+import ContactsPage from "./pages/ContactsPage";
 
 const MyRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -21,6 +23,8 @@ const MyRoutes = () => {
     { link: "/cart", element: <CartPage />, id: 7 },
     { link: "/creditCard", element: <CreditCard />, id: 8 },
     { link: "/paymentCheck", element: <PaymentCheck />, id: 9 },
+    { link: "/about", element: <AboutUsPage />, id: 10 },
+    { link: "/contacts", element: <ContactsPage />, id: 11 },
   ];
   return (
     <>

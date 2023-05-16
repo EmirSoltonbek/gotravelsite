@@ -59,10 +59,11 @@ const TripContextProvider = ({ children }) => {
 
   const location = useLocation();
   console.log(location.pathname);
+
   const fetchByType = async (query, value) => {
     const search = new URLSearchParams(window.location.search);
 
-    if (value === "All") {
+    if (value === "Все") {
       search.delete(query);
     } else {
       search.set(query, value);

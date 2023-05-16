@@ -9,8 +9,6 @@ import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import ShopIcon from '@mui/icons-material/Shop';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -18,7 +16,12 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import '../Navbar/Navbar.css'
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
+
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'; 
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import AddShoppingCart from '@mui/icons-material/AddShoppingCart';
+import { useCart } from '../../contexts/CartContextProvider';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -61,6 +64,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Navbar() {
+  const {cart} = useCart()
 
   // search
   const [searchParams, setSearchParams] = useSearchParams();
@@ -143,7 +147,7 @@ export default function Navbar() {
         >
             <LocationOnIcon />
         </IconButton> */}
-        <p>Главная</p>
+        <Link to="/"><p>Главная</p></Link>
       </MenuItem>
       <MenuItem>
         {/* <IconButton
@@ -163,7 +167,7 @@ export default function Navbar() {
         >
             <ShopIcon />
         </IconButton> */}
-        <p>Туры</p>
+        <Link to="/card"><p>Туры</p></Link>
       </MenuItem>
       <MenuItem>
         {/* <IconButton size="large" aria-label="show 4 new mails" color="inherit">
@@ -183,9 +187,43 @@ export default function Navbar() {
             <NotificationsIcon />
           </Badge>
         </IconButton> */}
-        <p>Онас</p>
+        <Link to="/about"><p>Онас</p></Link>
       </MenuItem>
-     
+      <MenuItem>
+      <Link to="/cart">
+        <IconButton
+          size="large"
+          aria-label="show 17 new notifications"
+          color="inherit"
+        >
+          <Badge badgeContent={cart.products.length} color="error">
+            <AddShoppingCart />
+          </Badge>
+        </IconButton>
+        </Link> 
+      </MenuItem>
+      <MenuItem>
+        <IconButton
+          size="large"
+          aria-label="show 17 new notifications"
+          color="inherit"
+        >
+          <Badge badgeContent={17} color="error">
+            <FavoriteBorderIcon />
+          </Badge>
+        </IconButton>
+      </MenuItem>
+      <MenuItem>
+        <IconButton
+          size="large"
+          aria-label="show 17 new notifications"
+          color="inherit"
+        >
+          <Badge badgeContent={17} color="error">
+            <BookmarkBorderIcon />
+          </Badge>
+        </IconButton>
+      </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
@@ -235,24 +273,38 @@ export default function Navbar() {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
           <button>
+          <Link to="/">
                 Главная
+            </Link>
             </button>
             <button>
                 Админ
             </button>
-
-
-                <button>Туры</button>
-            <button>Контакты</button>
-            <button>Онас</button>
+            <button>
+                <Link to="/card">
+                Туры
+                </Link>
+                </button>
+            <button>
+              <Link to="/contacts">
+              Контакты
+              </Link>
+              </button>
+            <button>
+            <Link to="/about">
+            Онас
+            </Link>
+            </button>
+            <Link to="/cart">
           <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                <Badge>
-                <ShopIcon />
+                <Badge badgeContent={cart.products.length} color="error">
+                <AddShoppingCart/>
                 </Badge>
             </IconButton>
+            </Link>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={44} color="error">
-                <MailIcon />
+                <FavoriteBorderIcon />
               </Badge>
             </IconButton>
             <IconButton
@@ -261,7 +313,7 @@ export default function Navbar() {
               color="inherit"
             >
               <Badge badgeContent={77} color="error">
-                <NotificationsIcon />
+                <BookmarkBorderIcon />
               </Badge>
             </IconButton>
             <IconButton

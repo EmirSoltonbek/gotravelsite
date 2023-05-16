@@ -109,24 +109,23 @@ const EditProduct = () => {
         /> */}
           <Box sx={{ minWidth: 120 }} >
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label" size="small">type</InputLabel>
+        <InputLabel id="demo-simple-select-label" size="small">Тип</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          label="type"
-          name="type"
+          label="Тип"
+          name="Тип"
           onChange={handleInput}
           value={trip.type || ""}
         >
-          <MenuItem value="Horseback tours">Horseback tours</MenuItem>
-          <MenuItem value="Trekking Kyrgyzstan">Trekking Kyrgyzstan</MenuItem>
-          <MenuItem value="Off road tours">Off road tours</MenuItem>
-          <MenuItem value="Winter tours">Winter tours</MenuItem>
-          <MenuItem value="Bike tours">Bike tours</MenuItem>
-          <MenuItem value="Culture tours">Culture tours</MenuItem>
-          <MenuItem value="Photo tours">Photo tours</MenuItem>
-          <MenuItem value="Experience tours">Experience tours</MenuItem>
-          <MenuItem value="One Day Tours">One Day Tours</MenuItem>
+          <MenuItem value="Конный тур">Конный тур</MenuItem>
+          <MenuItem value="Поход">Поход</MenuItem>
+          <MenuItem value="Экскурсионный">Экскурсионный</MenuItem>
+          <MenuItem value="Комбинированный">Комбинированный</MenuItem>
+          <MenuItem value="Пляжные">Пляжные</MenuItem>
+          <MenuItem value="Познавательные">Познавательные</MenuItem>
+          <MenuItem value="Зимний тур">Зимний тур</MenuItem>
+          <MenuItem value="Велотур">Велотур</MenuItem>
         </Select>
       </FormControl>
     </Box>

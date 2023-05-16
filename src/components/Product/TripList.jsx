@@ -37,25 +37,25 @@ const TripList = () => {
      <Box sx={{ minWidth: 120, textAlign:"center"}}>
       <FormControl >
         <InputLabel variant="standard" htmlFor="uncontrolled-native">
-          Type
+          Тип
         </InputLabel>
         <NativeSelect
-          defaultValue="All"
+          defaultValue="Все"
           inputProps={{
-            name: 'Type',
+            name: 'type',
             id: 'uncontrolled-native',
           }}
           onChange={(e)=>fetchByType("type", e.target.value)}
         >
-          <option value="All">All</option>
-          <option value="Bike tours">Bike tours</option>
-          <option value="Trekking Kyrgyzstan">Trekking Kyrgyzstan</option>
-          <option value="Off road tours">Off road tours</option>
-          <option value="Winter tours">Winter tours</option>
-          <option value="Culture tours">Culture tours</option>
-          <option value="Photo tours">Photo tours</option>
-          <option value="Experience tours">Experience tours</option>
-          <option value="One Day Tours">One Day Tours</option>
+          <option value="Все">Все</option>
+          <option value="Конный тур">Конный тур</option>
+          <option value="Поход">Поход</option>
+          <option value="Экскурсионный">Экскурсионный</option>
+          <option value="Комбинированный">Комбинированный</option>
+          <option value="Пляжные">Пляжные</option>
+          <option value="Познавательные">Познавательные</option>
+          <option value="Зимний тур">Зимний тур</option>
+          <option value="Велотур">Велотур</option>
        
         </NativeSelect>
       </FormControl>
