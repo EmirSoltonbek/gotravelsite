@@ -16,13 +16,17 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import '../Navbar/Navbar.css'
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'; 
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import AddShoppingCart from '@mui/icons-material/AddShoppingCart';
 import { useCart } from '../../contexts/CartContextProvider';
 import { useLike } from '../../contexts/LikeContextProvider';
+import { useFavorite } from '../../contexts/FavoriteContextProvider';
+import { useAuth } from '../../contexts/AuthContextProvider'; 
+import { ADMIN } from '../../helpers/consts';
+import { MenuList } from '@mui/material';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -67,6 +71,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function Navbar() {
   const {cart} = useCart();
   const {like} = useLike();
+  const {favorite} = useFavorite();
 
   // search
   const [searchParams, setSearchParams] = useSearchParams();
@@ -78,6 +83,11 @@ export default function Navbar() {
     });
   }, [search]);
   // search
+  const { 
+    handleLogout, 
+    user: { email }, 
+  } = useAuth(); 
+  const navigate = useNavigate();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -104,24 +114,37 @@ export default function Navbar() {
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
+    <Menu 
+    anchorEl={anchorEl} 
+    anchorOrigin={{ 
+      vertical: "top", 
+      horizontal: "right", 
+    }} 
+    id={menuId} 
+    keepMounted 
+    transformOrigin={{ 
+      vertical: "top", 
+      horizontal: "right", 
+    }} 
+    open={isMenuOpen} 
+    onClose={handleMenuClose} 
+  > 
+    {email ? ( 
+      <MenuList> 
+        <MenuItem>hello, {email}!</MenuItem> 
+        <MenuItem 
+          onClick={() => { 
+            handleLogout(); 
+            handleMenuClose(); 
+          }} 
+        > 
+          Logout 
+        </MenuItem> 
+      </MenuList> 
+    ) : ( 
+      <MenuItem onClick={() => navigate("/auth")}>Login</MenuItem> 
+    )} 
+  </Menu>
   );
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
@@ -216,15 +239,17 @@ export default function Navbar() {
         </IconButton>
       </MenuItem>
       <MenuItem>
+      <Link to="/favorites">
         <IconButton
           size="large"
           aria-label="show 17 new notifications"
           color="inherit"
         >
-          <Badge badgeContent={17} color="error">
+          <Badge badgeContent={favorite.products.length} color="error">
             <BookmarkBorderIcon />
           </Badge>
         </IconButton>
+        </Link>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -257,7 +282,7 @@ export default function Navbar() {
             noWrap
             component="div"
           >
-            GO!
+            GO
           </Typography>
           </IconButton>
          
@@ -279,9 +304,13 @@ export default function Navbar() {
                 Главная
             </Link>
             </button>
-            <button>
-                Админ
-            </button>
+            
+            {email === ADMIN ? (<Link to="/admin"> 
+            <button> 
+                Админ 
+                </button>
+                </Link>) : null} 
+          
             <button>
                 <Link to="/card">
                 Туры
@@ -311,15 +340,17 @@ export default function Navbar() {
               </Badge>
             </IconButton>
             </Link>
+            <Link to="/favorites">
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
             >
-              <Badge badgeContent={77} color="error">
+              <Badge badgeContent={favorite.products.length} color="error">
                 <BookmarkBorderIcon />
               </Badge>
             </IconButton>
+            </Link>
             <IconButton
               size="large"
               edge="end"

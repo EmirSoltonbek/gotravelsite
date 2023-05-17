@@ -4,20 +4,22 @@ body {
     padding: 0;
   }
   
-  .container {
+  .contain {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    /* display: flex;
+    flex-wrap: wrap; */
   }
   
   h1 {
-    font-size: 24px;
+    font-size: 20px!important;
     margin-top: 40px;
   }
   
   h2 {
-    font-size: 20px;
+    font-size: 15px!important;
     margin-top: 30px;
   }
   
@@ -29,14 +31,19 @@ body {
 
   /* Адаптивные стили */
   @media (max-width: 768px) {
+    .contain{
+      width: 100%;
+    }
     h1 {
-      font-size: 22px;
+      font-size: 20px;
     }
     
     h2 {
-      font-size: 18px;
+      font-size: 15px;
     }
-    
+    .contain img{
+      width: 100%;
+    }
     p {
       font-size: 14px;
     }

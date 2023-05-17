@@ -4,7 +4,6 @@ import TripCard from './TripCard'
 import { useSearchParams } from 'react-router-dom';
 import NativeSelect from '@mui/material/NativeSelect';
 import { Box, FormControl, Grid, InputLabel, Pagination} from '@mui/material';
-
 const TripList = () => {
     const {trips, getTrips, fetchByType}= useTrip();
     const [searchParams, setSearchParams]= useSearchParams();

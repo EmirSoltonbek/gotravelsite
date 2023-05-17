@@ -33,6 +33,7 @@ const AddProduct = () => {
   }
 
   console.log(trip);
+  console.log(1234);
 
   return (
     <>

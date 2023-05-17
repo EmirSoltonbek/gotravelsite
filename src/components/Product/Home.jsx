@@ -95,9 +95,6 @@ const Home = () => {
       <img style={{width:"230px", height:" 200px", padding: "3px 5px"}}  src='https://avatars.mds.yandex.net/i?id=be7824d26d367ab1bc6d18f79012c685d4011b7f-9182438-images-thumbs&n=13' alt='pic1'/> 
       <h6 style={{margin: "0px 10px", fontSize:"14px"}}>о. Ыссык-Куль</h6> 
       </div>  
-      <div className="item__image-container"><img style={{width:"230px", height:" 200px", padding: "3px 5px"}}  src='https://avatars.mds.yandex.net/i?id=2f1a7953e75b527587fbef9619a89348169cb66d-8981832-images-thumbs&n=13' alt='pic1'/> 
-      <h6 style={{margin: "0px 10px", fontSize:"14px"}}>каньон Джети-Огуз</h6> 
-      </div> 
       </div> 
     </div> 
     </div> 

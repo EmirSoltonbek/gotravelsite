@@ -1,6 +1,6 @@
 import axios from "axios";
 import { createContext, useContext, useReducer } from "react";
-import { JSON_API_TRIPS } from "../components/helpers/consts";
+import { JSON_API_TRIPS } from "../helpers/consts";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export const tripContext = createContext();
@@ -8,6 +8,7 @@ export const useTrip = () => useContext(tripContext);
 const INIT_STATE = {
   trips: [],
   tripDetails: {},
+  commentsState: {},
 };
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
@@ -15,6 +16,8 @@ const reducer = (state = INIT_STATE, action) => {
       return { ...state, trips: action.payload };
     case "GET_PRODUCT_DETAILS":
       return { ...state, tripDetails: action.payload };
+    case "ADD_COMMENTS":
+      return { ...state, commentsState: action.payload };
     default:
       return state;
   }
@@ -72,6 +75,22 @@ const TripContextProvider = ({ children }) => {
     navigate(url);
   };
 
+  async function setComments(obj) {
+    state.tripDetails.comments.push(obj);
+    const newObj = {
+      ...state.tripDetails,
+      comments: state.tripDetails.comments,
+    };
+    await axios.patch(`${JSON_API_TRIPS}/${state.tripDetails.id}`, newObj);
+  }
+
+  function setCommentsState(a) {
+    dispatch({
+      type: "ADD_COMMENTS",
+      payload: a,
+    });
+  }
+
   const values = {
     addTrip,
     getTrips,
@@ -81,6 +100,8 @@ const TripContextProvider = ({ children }) => {
     getTripDetails,
     saveEditedTrip,
     fetchByType,
+    setComments,
+    commentsState: state.commentsState,
   };
   return <tripContext.Provider value={values}>{children}</tripContext.Provider>;
 };

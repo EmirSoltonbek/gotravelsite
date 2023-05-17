@@ -8,11 +8,15 @@ const AboutUs = () => {
       <div className="aboutus">
         <div className="up">
           <img
-            style={{ width: "100%", height: "600px" }}
+            style={{ width: "100%", height: "800px", borderRadius: "30px",
+            paddingTop: "30px",
+            paddingLeft: "20px",
+            paddingBottom: "20px",
+            paddingRight: "20px",}}
             src="https://sportishka.com/uploads/posts/2022-03/1646948344_57-sportishka-com-p-bolshoi-turisticheskii-ryukzak-turizm-kras-65.jpg"
             alt="юрта"
           />
-          <div className="caption">
+          {/* <div className="caption">
             <h1
               style={{
                 marginLeft: "20%",
@@ -23,7 +27,7 @@ const AboutUs = () => {
               О нас
             </h1>
             <span>Для исследователей повсюду.</span>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* aboutus end */}

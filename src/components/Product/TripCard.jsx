@@ -13,16 +13,22 @@ import { useCart } from '../../contexts/CartContextProvider';
 import BookmarkOutlinedIcon from '@mui/icons-material/BookmarkOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import { useLike } from '../../contexts/LikeContextProvider';
-
+import { useFavorite } from '../../contexts/FavoriteContextProvider';
+import { useAuth } from '../../contexts/AuthContextProvider'; 
+import { ADMIN } from "../../helpers/consts";
 
 export default function TripCard({ item }) {
   const navigate = useNavigate();
   const {deleteTrip} =useTrip();
   const {addProductToCart,checkProductInCart}=useCart();
   const {addProductToLike, checkLike} = useLike()
+  const {addProductToFavorite, checkFavorite} = useFavorite();
+  const { 
+    user : {email} 
+  } = useAuth();
     return (<>
       
-      <Card sx={{ maxWidth: 345, my: "20px",mx:"5px", width:300}}>
+      <Card sx={{ maxWidth: 345, my: "20px",mx:"5px", width:300}} key={item.id}>
         <CardMedia
           sx={{ height: 220 }}
           image={item.picture}
@@ -37,28 +43,27 @@ export default function TripCard({ item }) {
           </Typography>
         </CardContent>
         <CardActions>
-            <>
-              <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
-                Edit
-              </Button>
-              <Button size="small" onClick={()=>{deleteTrip(item.id)}}>
-                Delete
-              </Button>
-            </>
-            <IconButton onClick={()=>addProductToCart(item)}>
-              <AddShoppingCartIcon 
-              color={checkProductInCart(item.id) ? "primary" : ""}/>
-            </IconButton>
-  
+        { email === ADMIN ? (  <> 
+              <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}> 
+                Edit 
+              </Button> 
+              <Button size="small" onClick={()=>{deleteTrip(item.id)}}> 
+                Delete 
+              </Button> 
+            </>) : ( <IconButton onClick={()=>addProductToCart(item)}> 
+              <AddShoppingCartIcon  
+              color={checkProductInCart(item.id) ? "primary" : ""}/> 
+            </IconButton>)}
+
           <Button size="small" onClick={()=>navigate(`/details/${item.id}`)}>Details</Button>
         </CardActions>
         <IconButton onClick={()=>addProductToLike(item)}>
               <FavoriteOutlinedIcon
               color={checkLike(item.id) ? "error" : ""}/>
             </IconButton>
-            <IconButton onClick={()=>addProductToLike(item)}>
+            <IconButton onClick={()=>addProductToFavorite(item)}>
               <BookmarkOutlinedIcon
-              color={checkLike(item.id) ? "primary" : ""}/>
+              color={checkFavorite(item.id) ? "primary" : ""}/>
             </IconButton>
       </Card>
       </>

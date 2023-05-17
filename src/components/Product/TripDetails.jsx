@@ -3,9 +3,10 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useTrip } from '../../contexts/TripContextProvider';
 import "../styles/TripDetails.css"
 
+
 const TripDetails = () => {
   const navigate = useNavigate();
-  const {getTripDetails, tripDetails} = useTrip();
+  const {getTripDetails, tripDetails, setComments , commentsState} = useTrip();
 
   const {id} = useParams();
 
@@ -16,25 +17,14 @@ const TripDetails = () => {
   const goBack = () => {
     navigate(-1);
   };
+  const [inputCom, setInputCom] = useState("");
 
-  function addComment(newComment){
-    tripDetails.comments.push(newComment);
-    console.log(tripDetails.comments)
-  }
-  const [comment, setComment]= useState('');
-  const handleValues=()=>{
-    let newComment = {
-        comment:comment,
-    }
-    addComment(newComment);
-    setComment('');
-}
 
   return (
     <>
-    <div class="container">
+    <div class="contain">
     <h1>Picture: </h1>
-    <p>{tripDetails.picture}</p>
+    <img src={tripDetails.picture} width="70%"/>
     
     <h2>Location:</h2>
     <p>{tripDetails.location}</p>
@@ -50,10 +40,39 @@ const TripDetails = () => {
     
     <h2>Заголовок 6</h2>
     <p>Описание 6...</p>
-    <input type="text" placeholder='username'/>
+    {/* <input type="text" placeholder='username'/> */}
     <br />
-    <textarea type="text" placeholder='comment' onChange={(e)=>setComment(e.target.value)}/>
-    <button onClick={handleValues}>Add comment</button>
+    
+    <form action="">
+    <textarea type="text" placeholder='comment' onChange={(e) => {
+                setInputCom(e.target.value);
+              }}/>
+    <button onClick={(e) => {
+              // e.preventDefault();
+              const newObj = {
+                ...commentsState,
+                comment: inputCom,
+                // user: email,
+              };
+              // console.log("newObj", newObj);
+
+              setComments(newObj)}}>Add comment</button>
+              </form>
+              
+                
+{tripDetails.comments
+  ? (tripDetails.comments.map((a) => {
+    console.log(a);
+      return (
+        <div>
+          <p>{a.user}</p>
+          <p>{a.comment}</p>
+        </div>
+      );
+    }))
+  : null}
+              
+           
     <br />
     <button onClick={goBack}>GO BACK</button>
   </div>
