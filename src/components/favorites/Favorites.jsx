@@ -31,6 +31,8 @@ const Favorite = () => {
         getFavorite();
     },[])
   return (<>
+  <div style={{textAlign:"center", fontSize:"50px"}}>Избранные</div>
+  <div style={{display:"flex", width:"95%", margin:"0 auto", justifyContent:"space-around", flexWrap:"wrap"}}>
    {favorite?.products.map((row,index)=>(
       <Card sx={{ maxWidth: 345, my: "20px",mx:"5px", width:300}} key={index}>
       <CardMedia
@@ -71,6 +73,7 @@ const Favorite = () => {
           </IconButton>
     </Card>
    ))}
+   </div>
    </>
   )
 }
