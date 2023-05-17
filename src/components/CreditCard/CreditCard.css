@@ -1,23 +1,23 @@
 .container{ 
-    display: flex; 
-    justify-content: center; 
-    margin:  100px 0px; 
+    display: flex!important; 
+    justify-content: center!important; 
+    margin:  100px 0px!important; 
 } 
  
 .credit-form{ 
-    display: flex; 
+    display: flex!important; 
 } 
 .cCard{ 
-    width: 80%; 
-    margin: 5px auto; 
+    width: 80%!important; 
+    margin: 5px auto!important; 
  
    
 } 
 .cardBtn{ 
-  display: flex; 
-  justify-content: center; 
-  margin: 30px 0px; 
+  display: flex!important; 
+  justify-content: center!important; 
+  margin: 30px 0px!important; 
 } 
 .rccs__card--front{ 
-    background-image: url("https://avatars.mds.yandex.net/i?id=25b31396a7ce20871ed7833de84ecb39de7e5355-7083166-images-thumbs&ref=rim&n=33&w=188&h=188"); 
+    background-image: url("https://avatars.mds.yandex.net/i?id=25b31396a7ce20871ed7833de84ecb39de7e5355-7083166-images-thumbs&ref=rim&n=33&w=188&h=188")!important; 
 }
