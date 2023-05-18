@@ -50,13 +50,11 @@ export default function TripCard({ item }) {
               <Button size="small" onClick={()=>{deleteTrip(item.id)}}> 
                 Delete 
               </Button> 
-            </>) : ( <IconButton onClick={()=>addProductToCart(item)}> 
-              <AddShoppingCartIcon  
-              color={checkProductInCart(item.id) ? "primary" : ""}/> 
-            </IconButton>)}
+            </>) :null} 
 
           <Button size="small" onClick={()=>navigate(`/details/${item.id}`)}>Details</Button>
         </CardActions>
+        { email ? (<>
         <IconButton onClick={()=>addProductToLike(item)}>
               <FavoriteOutlinedIcon
               color={checkLike(item.id) ? "error" : ""}/>
@@ -65,6 +63,11 @@ export default function TripCard({ item }) {
               <BookmarkOutlinedIcon
               color={checkFavorite(item.id) ? "primary" : ""}/>
             </IconButton>
+            <IconButton onClick={()=>addProductToCart(item)}> 
+              <AddShoppingCartIcon  
+              color={checkProductInCart(item.id) ? "primary" : ""}/> 
+            </IconButton>
+            </>):null}
       </Card>
       </>
     );

@@ -5,7 +5,7 @@ import {
   calcTotalPrice,
   getCountProductsInCart,
 } from "../helpers/functions";
-
+import { useAuth } from "./AuthContextProvider";
 export const cartContext = createContext();
 export const useCart = () => useContext(cartContext);
 
@@ -25,6 +25,10 @@ function reducer(state = INIT_STATE, action) {
 }
 
 const CartContextProvider = ({ children }) => {
+  const {
+    user: { email },
+  } = useAuth();
+
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
   const getCart = () => {
@@ -45,6 +49,7 @@ const CartContextProvider = ({ children }) => {
       payload: cart,
     });
   };
+  console.log();
 
   const addProductToCart = (product) => {
     let cart = JSON.parse(localStorage.getItem("cart"));

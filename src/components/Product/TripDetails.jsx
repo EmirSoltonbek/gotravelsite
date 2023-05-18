@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { useTrip } from '../../contexts/TripContextProvider';
 import "../styles/TripDetails.css"
+import { useAuth } from '../../contexts/AuthContextProvider';
 
 
 const TripDetails = () => {
@@ -18,12 +19,14 @@ const TripDetails = () => {
     navigate(-1);
   };
   const [inputCom, setInputCom] = useState("");
-
+  const { 
+    user : {email} 
+  } = useAuth();
 
   return (
     <>
     <div class="contain">
-    <h1>Picture: </h1>
+    <h1>Детали:</h1>
     <img src={tripDetails.picture} width="70%"/>
     
     <h2>Location:</h2>
@@ -40,10 +43,9 @@ const TripDetails = () => {
     
     <h2>Заголовок 6</h2>
     <p>Описание 6...</p>
-    {/* <input type="text" placeholder='username'/> */}
     <br />
-    
-    <form action="">
+    {email ? (<>
+      <form action="" className='comment-form'>
     <textarea type="text" placeholder='comment' onChange={(e) => {
                 setInputCom(e.target.value);
               }}/>
@@ -52,21 +54,23 @@ const TripDetails = () => {
               const newObj = {
                 ...commentsState,
                 comment: inputCom,
-                // user: email,
+                user: email,
               };
               // console.log("newObj", newObj);
 
-              setComments(newObj)}}>Add comment</button>
+              setComments(newObj)}} className='add-comment-btn'>Add comment</button>
               </form>
+    </>):<><div>Зарегистрируйся чтобы оставлять комментарии!</div></>}
+    
               
                 
 {tripDetails.comments
   ? (tripDetails.comments.map((a) => {
     console.log(a);
       return (
-        <div>
-          <p>{a.user}</p>
-          <p>{a.comment}</p>
+        <div className='comment-block'>
+          <p className='comment-user'>{a.user[0]}</p>
+          <p className='comment'>{a.comment}</p>
         </div>
       );
     }))
@@ -74,7 +78,7 @@ const TripDetails = () => {
               
            
     <br />
-    <button onClick={goBack}>GO BACK</button>
+    <button onClick={goBack} className='goback-btn'>GO BACK</button>
   </div>
     </>
   )

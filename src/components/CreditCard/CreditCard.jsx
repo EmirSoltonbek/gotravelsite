@@ -118,7 +118,7 @@ const {
             </Row> 
             <Button className="cardBtn" onClick={()=>{ 
               navigate("/paymentCheck") 
-            }}>Pay {cart.totalPrice}$</Button> 
+            }}>Pay {cart.totalPrice} сом</Button> 
           </Form> 
         </div>  
       </div> 

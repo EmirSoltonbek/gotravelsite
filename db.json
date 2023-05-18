@@ -18,7 +18,14 @@
       "price": 900,
       "type": "Поход",
       "id": 2,
-      "comments": []
+      "comments": [
+        {
+          "comment": "bbbbbbbb",
+          "user": "emir@gmail.com"
+        }
+      ],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR02KQ15V8tGbIDZRu6S3tTQIWzKgRN4EBp3w&usqp=CAU",
@@ -32,7 +39,9 @@
         {
           "comment": "emiremiremir"
         }
-      ]
+      ],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://i.ytimg.com/vi/Ulb8p3ZNIWo/maxresdefault.jpg",
@@ -42,7 +51,18 @@
       "price": 1900,
       "type": "Экскурсионный",
       "id": 4,
-      "comments": []
+      "comments": [
+        {
+          "comment": "best tour !!!",
+          "user": "emir@gmail.com"
+        },
+        {
+          "comment": "best in kyrgyzstan!",
+          "user": "emir@gmail.com"
+        }
+      ],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGnJ6-wJ3l2ZRAnW0RcymWn5yS904AfYAgnA&usqp=CAU",
@@ -52,7 +72,9 @@
       "price": 2300,
       "type": "Комбинированный",
       "id": 5,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://u24.ru/img/news/article_big_453491535238422.jpg",
@@ -62,7 +84,9 @@
       "price": 5000,
       "type": "Пляжные",
       "id": 6,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://ic.pics.livejournal.com/frantsouzov/21599674/594398/594398_original.jpg",
@@ -72,7 +96,9 @@
       "price": 1200,
       "type": "Познавательные",
       "id": 7,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://35photo.pro/photos_series/2283/2283216.jpg",
@@ -82,7 +108,9 @@
       "price": 3000,
       "type": "Познавательные",
       "id": 8,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrUd9w3uSLv4quZ4WptJNJ9a_hH-t3SUv2vg&usqp=CAU",
@@ -92,7 +120,9 @@
       "price": 5000,
       "type": "Пляжные",
       "id": 9,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://24.kg/files/media/73/73874.jpg",
@@ -102,7 +132,9 @@
       "price": 1700,
       "type": "Оздоровительные",
       "id": 10,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://avatars.mds.yandex.net/i?id=54aa7e149d8ae9ca9aa4c31ac7a80d8f18539c2e-8448606-images-thumbs&n=13",
@@ -112,7 +144,9 @@
       "price": 2000,
       "type": "Велотур",
       "id": 11,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://avatars.mds.yandex.net/i?id=5d147e897927ddcabb0be6be6171fc39c20468af-5022897-images-thumbs&n=13",
@@ -122,7 +156,9 @@
       "price": 1000,
       "type": "Поход",
       "id": 12,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://avatars.mds.yandex.net/i?id=729af98208ec989d03270c63419f606d-5469819-images-thumbs&n=13",
@@ -132,7 +168,9 @@
       "price": 2900,
       "type": "Конный тур",
       "id": 13,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://avatars.mds.yandex.net/i?id=d30f1c28e00f8e2f3deed01e9ceca651f8977da9-8209451-images-thumbs&n=13",
@@ -142,7 +180,9 @@
       "price": 2300,
       "type": "Комбинированный",
       "id": 14,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://avatars.mds.yandex.net/i?id=69a257b04a59cebca4443e947f13933e77ea50fc-7552414-images-thumbs&n=13",
@@ -151,7 +191,9 @@
       "price": 5000,
       "type": "Велотур",
       "id": 15,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://avatars.mds.yandex.net/i?id=edc66dab46b31de7d0356edd2d59e6a920624234-7545000-images-thumbs&n=13",
@@ -161,7 +203,9 @@
       "price": 3200,
       "type": "Познавательные",
       "id": 16,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://avatars.mds.yandex.net/i?id=ce7867dcf78d46ba8a02192be8976df62051a08f-9240642-images-thumbs&n=13",
@@ -171,7 +215,9 @@
       "price": 3000,
       "type": "Познавательные",
       "id": 17,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://avatars.mds.yandex.net/i?id=bfaa899b279620cd3c8dd5e3c8f4597b8fa96164-9242678-images-thumbs&n=13",
@@ -181,7 +227,9 @@
       "price": 2000,
       "type": "Экскурсионный",
       "id": 18,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://avatars.mds.yandex.net/i?id=012d83cfa460891189725c3f720b6f3d17edfb7e-8497330-images-thumbs&n=13",
@@ -191,7 +239,9 @@
       "price": 1500,
       "type": "Пляжные",
       "id": 19,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4RwpJ0iUp-lT_RpoZg9WOe_sNzQ7bfxJfCQ&usqp=CAU",
@@ -201,7 +251,9 @@
       "price": 4500,
       "type": "Зимний тур",
       "id": 20,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://avatars.mds.yandex.net/i?id=de6e9b543e294e140a3025e59e3eb8bf00878880-7753204-images-thumbs&n=13",
@@ -211,7 +263,9 @@
       "price": 1700,
       "type": "Оздоровительные",
       "id": 21,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRur7hDojJ39hGiCqB37EtK0mXl8MUYswUBB4ROXoFSlbMPKYgcCPK-3Czyw3-wU_3Y5aM&usqp=CAU",
@@ -221,7 +275,9 @@
       "price": 5700,
       "type": "Зимний тур",
       "id": 22,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFvJmqscIFGVGifE1T89f-xudpCzkoXAMh8g&usqp=CAU",
@@ -231,7 +287,9 @@
       "price": 2000,
       "type": "Экскурсионный",
       "id": 23,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     },
     {
       "picture": "https://avatars.mds.yandex.net/i?id=ad55af39063cb2e71b27c42b600b9e925f419823-9181946-images-thumbs&n=13",
@@ -240,7 +298,9 @@
       "price": 5000,
       "type": "Велотур",
       "id": 24,
-      "comments": []
+      "comments": [],
+      "likes": 0,
+      "dislikes": 0
     }
   ]
 }

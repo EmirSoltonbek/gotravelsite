@@ -4,10 +4,13 @@ import "./PaymentCheck.css"
 
 const PaymentCheck = () => {
     const {cart} = useCart();
-    const [ date, setDate] = useState('')
+    const [ date, setDate] = useState('');
+    const [month, setMonth]= useState('');
+    const [year, setYear]= useState('');
     useEffect(()=>{
         setDate(new Date().getDate().toString());
-        console.log( date);
+        setMonth(new Date().getMonth().toString());
+        setYear(new Date().getFullYear().toString());
     },[])
   return (
     <div className="payment-receipt">
@@ -19,7 +22,7 @@ const PaymentCheck = () => {
         </div>
         <div className="receipt-row">
           <span className="receipt-label">Payment Date:</span>
-          <span className="receipt-value">{date}</span>
+          <span className="receipt-value">{date}.0{month}.{year}</span>
         </div>
         <div className="receipt-row">
           <span className="receipt-label">Payment Amount:</span>

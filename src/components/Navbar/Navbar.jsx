@@ -304,12 +304,11 @@ export default function Navbar() {
                 Главная
             </Link>
             </button>
-            
+            <button>
             {email === ADMIN ? (<Link to="/admin"> 
-            <button> 
                 Админ 
-                </button>
                 </Link>) : null} 
+                </button>
           
             <button>
                 <Link to="/card">
