@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/gotravelsite/static/css/main.ad2ed3b5.css",
+    "main.js": "/gotravelsite/static/js/main.0a852fee.js",
+    "static/media/NewMexico_3.mp4": "/gotravelsite/static/media/NewMexico_3.4fa59d42f74b51c4b38d.mp4",
+    "index.html": "/gotravelsite/index.html",
+    "main.ad2ed3b5.css.map": "/gotravelsite/static/css/main.ad2ed3b5.css.map",
+    "main.0a852fee.js.map": "/gotravelsite/static/js/main.0a852fee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad2ed3b5.css",
+    "static/js/main.0a852fee.js"
+  ]
+}
